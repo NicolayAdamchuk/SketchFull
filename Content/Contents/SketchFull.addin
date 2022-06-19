@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+ <AddIn Type="Application">
+    <Name>Создание полных эскизов</Name>
+    <Assembly>SketchFull.dll</Assembly>
+    <ClientId>EE346D9D-4376-47CA-9B45-465D5A6CFAAA</ClientId>
+    <FullClassName>SketchFull.SketchFullApp</FullClassName>
+    <VendorId>Ar-Cadia</VendorId>
+    <VendorDescription>Ar-Cadia, www.ar-cadia.com.ua</VendorDescription>
+  </AddIn>  
+</RevitAddIns>

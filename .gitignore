@@ -1,0 +1,16 @@
+
+Install_sketch_full/Debug/Install_sketch_19_02_21.msi
+Install_sketch_full/Debug/setup.exe
+Install_sketch_full/Install_sketch.vdproj
+Install_sketch_full/Install_sketch_full.sln
+Install_sketch_full/Install_sketch_full.suo
+Install_sketch_full/Release/InstallBrace_ru.msi
+Install_sketch_full/Release/setup.exe
+*.dll
+*.xml
+*.cache
+*.txt
+*.pdb
+*.rvt
+Новые изменения.docx
+Сообщение.docx
