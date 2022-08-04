@@ -938,9 +938,13 @@ namespace SketchFull
                     int count_rebars = GetCountRebars();
 
                     string text = "";
-                    if (count_rebars > 1) text = " (" + count_rebars.ToString() + ") ";
+                    
                     // текст по умолчанию - диаметр + полная длина стержня
-                    if (IsTotalLength) text = text + "Ø" + Diametr_str + " L=" + Length_str;
+                    if (IsTotalLength)
+                    {
+                        if (count_rebars > 1) text = " (" + count_rebars.ToString() + ") ";
+                        text = text + "Ø" + Diametr_str + " L=" + Length_str;
+                    }
 
                     if (rebar_tag != null)
                     {

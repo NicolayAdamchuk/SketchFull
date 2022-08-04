@@ -967,7 +967,7 @@ namespace SketchFull
                 ent_storage.Set<bool>(field_current, m_data.Clear);
 
                 field_current = schema_sketchs.GetField("IsTotalLength");
-                ent_storage.Set<bool>(field_current, m_data.Clear);
+                ent_storage.Set<bool>(field_current, m_data.IsTotalLength);
 
                 field_current = schema_sketchs.GetField("Scale");
                 ent_storage.Set<double>(field_current, m_data.Scale, UnitTypeId.Custom);
