@@ -3094,7 +3094,8 @@ namespace SketchFull
             TextOnRebar tor = new TextOnRebar();
             tor.rebar = rebar as Element;
             tor.position = (c_straight.GetEndPoint(1) + c_straight.GetEndPoint(0)) / 2;
-            tor.value = Math.Round(rbd.HookLength0 + rbd.BendRadius + rbd.BarModelDiameter,3);
+            // tor.value = Math.Round(rbd.HookLength0 + rbd.BendRadius + rbd.BarModelDiameter,3);
+            tor.value = Math.Round(rbd.HookLength0 + rbd.HookBendRadius + rbd.BarModelDiameter, 3);
             if (rbd.HookAngle0 < 90) tor.value = Math.Round(rbd.HookLength0 + c_arc.ApproximateLength,3);
             // вектор сегмента должен быть направлен к концу стержня
             // чтобы можно было разместить текст на конце
@@ -3118,7 +3119,8 @@ namespace SketchFull
             TextOnRebar tor = new TextOnRebar();
             tor.rebar = rebar as Element;
             tor.position = (c_straight.GetEndPoint(1) + c_straight.GetEndPoint(0)) / 2;
-            tor.value = Math.Round(rbd.HookLength0 + rbd.BendRadius + rbd.BarModelDiameter,3);
+            // tor.value = Math.Round(rbd.HookLength0 + rbd.BendRadius + rbd.BarModelDiameter,3);
+            tor.value = Math.Round(rbd.HookLength0 + rbd.HookBendRadius + rbd.BarModelDiameter, 3);
             if (rbd.HookAngle0 < 90) tor.value = Math.Round(rbd.HookLength0 + c_arc.ApproximateLength,3);
             // вектор сегмента должен быть направлен к концу стержня
             // чтобы можно было разместить текст на конце
@@ -3142,7 +3144,8 @@ namespace SketchFull
             TextOnRebar tor = new TextOnRebar();
             tor.rebar = rebar as Element;
             tor.position = (c_straight.GetEndPoint(1) + c_straight.GetEndPoint(0)) / 2;
-            tor.value = Math.Round(rbd.HookLength1 + rbd.BendRadius + rbd.BarModelDiameter,3);
+            // tor.value = Math.Round(rbd.HookLength1 + rbd.BendRadius + rbd.BarModelDiameter,3);
+            tor.value = Math.Round(rbd.HookLength1 + rbd.HookBendRadius + rbd.BarModelDiameter, 3);
             if (rbd.HookAngle1 < 90) tor.value = Math.Round(rbd.HookLength0 + c_arc.ApproximateLength,3);
             // вектор сегмента должен быть направлен к концу стержня
             // чтобы можно было разместить текст на конце
@@ -3166,7 +3169,8 @@ namespace SketchFull
             TextOnRebar tor = new TextOnRebar();
             tor.rebar = rebar as Element;
             tor.position = (c_straight.GetEndPoint(1) + c_straight.GetEndPoint(0))/2;
-            tor.value = Math.Round(rbd.HookLength1 + rbd.BendRadius + rbd.BarModelDiameter,3);
+            // tor.value = Math.Round(rbd.HookLength1 + rbd.BendRadius + rbd.BarModelDiameter,3);
+            tor.value = Math.Round(rbd.HookLength1 + rbd.HookBendRadius + rbd.BarModelDiameter, 3);
             if (rbd.HookAngle1 < 90) tor.value = Math.Round(rbd.HookLength0 + c_arc.ApproximateLength,3);
             // вектор сегмента должен быть направлен к концу стержня
             // чтобы можно было разместить текст на конце
