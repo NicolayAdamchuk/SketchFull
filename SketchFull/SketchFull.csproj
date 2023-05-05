@@ -126,12 +126,12 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy "e:\OneDrive\Project 2023\SketchFull\SketchFull\bin\Debug\SketchFull_2023.dll" "c:\ProgramData\Autodesk\ApplicationPlugins\ADNPlugin-SketchReinforcement_2023.bundle\Contents\SketchFull_2023.dll"
-copy "e:\OneDrive\Project 2023\SketchFull\SketchFull\bin\Debug\ru\SketchFull_2023.resources.dll" "c:\ProgramData\Autodesk\ApplicationPlugins\ADNPlugin-SketchReinforcement_2023.bundle\Contents\ru\SketchFull_2023.resources.dll"
+    <PostBuildEvent>copy "c:\MyProject\SketchFull\SketchFull\bin\Debug\SketchFull_2023.dll" "c:\ProgramData\Autodesk\ApplicationPlugins\ADNPlugin-SketchReinforcement_2023.bundle\Contents\SketchFull_2023.dll"
+copy "c:\MyProject\SketchFull\SketchFull\bin\Debug\ru\SketchFull_2023.resources.dll" "c:\ProgramData\Autodesk\ApplicationPlugins\ADNPlugin-SketchReinforcement_2023.bundle\Contents\ru\SketchFull_2023.resources.dll"
 
-copy "e:\OneDrive\Project 2023\SketchFull\SketchFull\bin\Debug\SketchFull_2023.dll" "e:\OneDrive\Project 2023\ShellAllSketch\Content\Contents\SketchFull_2023.dll" 
+copy "c:\MyProject\SketchFull\SketchFull\bin\Debug\SketchFull_2023.dll" "c:\MyProject\ShellAllSketch\Content\Contents\SketchFull_2023.dll" 
 
-copy "e:\OneDrive\Project 2023\SketchFull\SketchFull\bin\Debug\ru\SketchFull_2023.resources.dll"  "e:\OneDrive\Project 2023\ShellAllSketch\Content\Contents\ru\SketchFull_2023.resources.dll"</PostBuildEvent>
+copy "c:\MyProject\SketchFull\SketchFull\bin\Debug\ru\SketchFull_2023.resources.dll"  "c:\MyProject\ShellAllSketch\Content\Contents\ru\SketchFull_2023.resources.dll"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
