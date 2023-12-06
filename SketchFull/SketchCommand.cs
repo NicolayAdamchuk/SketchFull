@@ -68,11 +68,21 @@ namespace SketchFull
         {
             // writer = new StreamWriter("e:\\time.txt");
             string VN = commandData.Application.Application.VersionNumber;
+
+#if RVT2023
             if (Convert.ToInt32(VN) > 2023)
             {
                 MessageBox.Show(Resourses.Strings.Texts.VersionNumber);
                 return Result.Cancelled;
             }
+#endif
+#if RVT2024
+            if (Convert.ToInt32(VN) > 2024)
+            {
+                MessageBox.Show(Resourses.Strings.Texts.VersionNumber);
+                return Result.Cancelled;
+            }
+#endif
 
             doc = commandData.Application.ActiveUIDocument.Document;
 
@@ -1383,8 +1393,33 @@ namespace SketchFull
             //t.Commit();
             //t.Start();
 
+
+
             // создаем основную группу
-            gov.group = doc.Create.NewGroup(buildImage.Eids);           
+           
+                for (int i=0; i< buildImage.Eids.Count; i++)
+                {
+                    try
+                    {
+                        ElementId id = doc.GetElement(buildImage.Eids.ElementAt(i)).GroupId;
+                        
+                    }       
+                    catch
+                    {
+                    // удаляем элементы у которых .GroupId == null
+                    buildImage.Eids.Remove(buildImage.Eids.ElementAt(i));
+                    }                    
+                }
+
+            if (buildImage.Eids.Count == 0)
+            {
+                //t.RollBack();
+                return null;
+            }
+
+            gov.group = doc.Create.NewGroup(buildImage.Eids);
+            
+             
             gov.group.GroupType.Name = "Sketch_rebar_" + rebar.Id.IntegerValue.ToString() + "_" + doc.ActiveView.Name;            
             gov.groupH = CalculateGroupH(gov.group.get_BoundingBox(doc.ActiveView), plane3D);
             

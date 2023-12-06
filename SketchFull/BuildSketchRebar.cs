@@ -911,6 +911,7 @@ namespace SketchFull
                         CreateTextNote(label, tn);
                         createdText.Add(label);
                         Eids.Add(tn.Id);
+                        
 
                     }
                     // текст на крюках
@@ -928,6 +929,7 @@ namespace SketchFull
                         doc.Regenerate();
                         CreateTextNoteOnHook(label, tn);
                         Eids.Add(tn.Id);
+                       
                     }
 
                     if (detailCurves.Count > 0)
@@ -982,6 +984,7 @@ namespace SketchFull
                         tn.Location.Move(active_view.RightDirection.Negate() * active_view.Scale * tn.Width / 2);
                         
                         Eids.Add(tn.Id);
+                        
                     }
                 }
             }
@@ -1051,6 +1054,7 @@ namespace SketchFull
                 Curve c = newcurve.GeometryCurve;
                 Eids_lines.Add(newcurve.Id);
                 Eids.Add(newcurve.Id);                     // все кривые показываем в группе чертежа
+                
 
                 if (outline == null)
                 {
